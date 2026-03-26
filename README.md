@@ -48,7 +48,7 @@ Commit `db_versions.json` into your analysis repository to ensure that any colla
 ### Using conda (recommended)
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/annovar-db-sync.git
+git clone https://github.com/femrebora/annovar-db-sync.git
 cd annovar-db-sync
 conda env create -f environment.yml
 conda activate annovar-db-sync
@@ -58,7 +58,7 @@ pip install -e .
 ### Using pip
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/annovar-db-sync.git
+git clone https://github.com/femrebora/annovar-db-sync.git
 cd annovar-db-sync
 pip install .
 ```
