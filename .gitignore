@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.venv/
+env/
+venv/
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# Genomic data files (large, not tracked in git)
+*.vcf.gz
+*.vcf.gz.tbi
+*.vcf.gz.md5
+*.avinput
+*.bam
+*.bai
+*.cram
+
+# ANNOVAR intermediate working dirs
+.annovar_db_sync_work/
+
+# The lock file records which versions you have LOCALLY installed.
+# You MAY want to commit db_versions.json to your analysis repo for
+# reproducibility – in that case, remove the next line.
+# db_versions.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp

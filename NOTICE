@@ -1,0 +1,24 @@
+annovar-db-sync
+Copyright (C) 2026 Emre Bora
+
+This program is a derivative work based on update_annovar_db:
+  https://github.com/mobidic/update_annovar_db
+  Original work Copyright (C) MoBiDiC / CHU Montpellier
+  Licensed under the GNU General Public License v3.0
+
+Specifically:
+
+  - src/annovar_db_sync/converter.py
+    Derived from avinput2annovardb.py in the original project.
+    Core logic for converting ClinVar .avinput files to ANNOVAR database
+    format is preserved; the implementation has been refactored for
+    streaming I/O, immutability, type hints, and improved error handling.
+
+  - src/annovar_db_sync/clinvar.py
+    The NCBI FTP discovery and MD5-based update-check strategy is inspired
+    by update_resources.py in the original project.
+
+All other files in this project are new work by Emre Bora.
+
+This derivative work is licensed under the GNU General Public License
+v3.0 or later (see LICENSE).

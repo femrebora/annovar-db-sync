@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "annovar-db-sync"
+version = "0.1.0"
+description = "Automated ANNOVAR database synchronization for ClinVar and InterVar with version locking"
+readme = "README.md"
+license = { text = "GPL-3.0-or-later" }
+requires-python = ">=3.10"
+authors = [{ name = "Emre Bora" }]
+keywords = ["bioinformatics", "annovar", "clinvar", "intervar", "genomics", "variant-annotation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+    "requests>=2.28",
+    "urllib3>=2.0",
+    "certifi",
+]
+
+[project.scripts]
+annovar-db-sync = "annovar_db_sync.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "responses>=0.23",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+
+[tool.coverage.run]
+source = ["annovar_db_sync"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 80
